@@ -1,0 +1,311 @@
+/* Hide by default (desktop view) */
+.mobile-igce {
+    display: none;
+}
+
+/* Show only when screen is mobile */
+@media (max-width: 768px) {
+
+    .mobile-igce {
+        display: block;
+        background: #fff;
+        /* border-top: 3px solid #2f80ed; */
+        padding: 10px 15px;
+        font-family: sans-serif;
+    }
+
+    .mobile-nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mobile-logo {
+        width: 45px;
+        height: auto;
+    }
+
+    .mobile-title {
+        margin: 0;
+        color: #9C27B0;
+        font-weight: 600;
+    }
+
+    .mobile-text small {
+        color: #6A1B9A;
+        font-size: 12px;
+        display: block;
+    }
+
+    .mobile-naac {
+        color: red;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    /* Hamburger Button */
+    .mobile-menu-btn {
+        background: white;
+        border: 1px solid #ccc;
+        padding: 8px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #555;
+        margin: 4px 0;
+    }
+}
+
+/* Hide dropdown initially */
+.mobile-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    transition: max-height 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* When active */
+.mobile-dropdown.active {
+    max-height: 400px;
+}
+
+.mobile-dropdown a {
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+}
+
+.mobile-dropdown a:hover {
+    background: #f7b7ffe2;
+}
+
+/* Hide desktop nav in mobile */
+@media (max-width: 768px) {
+    .header-navbar {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none !important;
+    }
+}
+
+/* Desktop height */
+#carouselExampleCaptions .carousel-item {
+    height: 500px;
+}
+
+#carouselExampleCaptions .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobile height */
+@media (max-width: 768px) {
+    #carouselExampleCaptions .carousel-item {
+        height: 250px;
+    }
+}
+
+/* ===== ABOUT HERO SECTION ===== */
+
+.about-hero {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #6A1B9A, #9C27B0);
+    /* Change to your brand colors */
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* Main Title */
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* Description */
+.hero-description {
+    font-size: 17px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+/* Stats Section */
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: left;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* ===== SECTION SPACING ===== */
+.section-padding {
+    padding: 90px 0;
+}
+
+/* ===== Section Header ===== */
+.section-subtitle {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* ===== About Image ===== */
+.about-img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== Vision & Mission Section ===== */
+section.row.align-items-center {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section.row.align-items-center h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* ===== Cards ===== */
+.program-card {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Icon Box ===== */
+.icon-box {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box i {
+    font-size: 28px;
+    color: #fff;
+    /* Change to your theme color */
+}
+
+/* ===== Text Styling ===== */
+.program-card h4 {
+    font-size: 20px;
+}
+
+.program-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    section.row.align-items-center {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 991px) {
+    .about-hero {
+        text-align: center;
+        padding: 70px 0;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        margin: 0 auto 30px;
+    }
+}
+
+.vm {
+    color: #6A1B9A;
+}

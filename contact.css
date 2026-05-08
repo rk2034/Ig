@@ -1,0 +1,128 @@
+.page-header {
+      background: linear-gradient(135deg, #6A1B9A, #9C27B0);
+    }
+    /* Hide by default (desktop view) */
+    .mobile-igce {
+      display: none;
+    }
+
+    /* Show only when screen is mobile */
+    @media (max-width: 768px) {
+
+      .mobile-igce {
+        display: block;
+        background: #fff;
+        /* border-top: 3px solid #2f80ed; */
+        padding: 10px 15px;
+        font-family: sans-serif;
+      }
+
+      .mobile-nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .mobile-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .mobile-logo {
+        width: 45px;
+        height: auto;
+      }
+
+      .mobile-title {
+        margin: 0;
+        color: #9C27B0;
+        font-weight: 600;
+      }
+
+      .mobile-text small {
+        color: #6A1B9A;
+        font-size: 12px;
+        display: block;
+      }
+
+      .mobile-naac {
+        color: red;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      /* Hamburger Button */
+      .mobile-menu-btn {
+        background: white;
+        border: 1px solid #ccc;
+        padding: 8px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .mobile-menu-btn span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #555;
+        margin: 4px 0;
+      }
+    }
+
+    /* Hide dropdown initially */
+    .mobile-dropdown {
+      max-height: 0;
+      overflow: hidden;
+      background: white;
+      transition: max-height 0.4s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* When active */
+    .mobile-dropdown.active {
+      max-height: 400px;
+    }
+
+    .mobile-dropdown a {
+      padding: 12px 15px;
+      text-decoration: none;
+      color: #333;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+    }
+
+    .mobile-dropdown a:hover {
+      background: #f7b7ffe2;
+    }
+
+    /* Hide desktop nav in mobile */
+    @media (max-width: 768px) {
+      .header-navbar {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        display: none !important;
+      }
+    }
+
+    /* Desktop height */
+    #carouselExampleCaptions .carousel-item {
+      height: 500px;
+    }
+
+    #carouselExampleCaptions .carousel-item img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Mobile height */
+    @media (max-width: 768px) {
+      #carouselExampleCaptions .carousel-item {
+        height: 250px;
+      }
+    }

@@ -1,0 +1,320 @@
+/* ==========================================
+   PAGE HEADER - PROPERLY CENTERED
+========================================== */
+
+.page-header {
+  background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-header .container {
+  max-width: 700px;
+}
+
+.page-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.7;
+}
+
+.leadership-overview {
+  margin: 20px;
+}
+
+/* ==========================================
+   CLEAN PROFESSIONAL MANAGEMENT LAYOUT
+========================================== */
+
+.management-section {
+  margin-bottom: 100px;
+  padding-top: 60px;
+}
+
+.management-section .row {
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.management-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.designation,
+.university-badge,
+.degree-badge,
+.year-badge {
+  font-size: 13px;
+  color: #9C27B0;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+/* IMAGE */
+.management-image {
+  position: relative;
+}
+
+.management-image .image-frame {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.management-image .image-frame:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.management-image img {
+  border-radius: 4px;
+  width: 100%;
+  display: block;
+}
+
+.management-image .image-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #9C27B0;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+/* CONTENT */
+.management-content {
+  padding-left: 30px;
+}
+
+.highlight-item,
+.role-item,
+.contact-item {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.highlight-item h5,
+.role-item h5,
+.contact-item h5 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.highlight-item p,
+.role-item p,
+.contact-item p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* MESSAGE CARD */
+.message-card {
+  margin-top: 50px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-left: 5px solid #9C27B0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.message-header {
+  background: #f8f6fc;
+  color: #3A0CA3;
+  padding: 18px 25px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.message-body {
+  padding: 30px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.message-signature {
+  margin-top: 25px;
+}
+
+.message-signature p {
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .management-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .management-section {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .management-section {
+    padding-top: 40px;
+  }
+
+  .management-image .image-badge {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .message-body {
+    padding: 20px;
+  }
+}
+
+/* Hide by default (desktop view) */
+.mobile-igce {
+  display: none;
+}
+
+/* Show only when screen is mobile */
+@media (max-width: 768px) {
+
+  .mobile-igce {
+    display: block;
+    background: #fff;
+    /* border-top: 3px solid #2f80ed; */
+    padding: 10px 15px;
+    font-family: sans-serif;
+  }
+
+  .mobile-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-logo {
+    width: 45px;
+    height: auto;
+  }
+
+  .mobile-title {
+    margin: 0;
+    color: #9C27B0;
+    font-weight: 600;
+  }
+
+  .mobile-text small {
+    color: #6A1B9A;
+    font-size: 12px;
+    display: block;
+  }
+
+  .mobile-naac {
+    color: red;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  /* Hamburger Button */
+  .mobile-menu-btn {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #555;
+    margin: 4px 0;
+  }
+}
+
+/* Hide dropdown initially */
+.mobile-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  background: white;
+  transition: max-height 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* When active */
+.mobile-dropdown.active {
+  max-height: 400px;
+}
+
+.mobile-dropdown a {
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #333;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}
+
+.mobile-dropdown a:hover {
+  background: #f7b7ffe2;
+}
+
+/* Hide desktop nav in mobile */
+@media (max-width: 768px) {
+  .header-navbar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none !important;
+  }
+}
+
+/* Desktop height */
+#carouselExampleCaptions .carousel-item {
+  height: 500px;
+}
+
+#carouselExampleCaptions .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile height */
+@media (max-width: 768px) {
+  #carouselExampleCaptions .carousel-item {
+    height: 250px;
+  }
+}
+
+#director {
+  margin-top: 0;
+  padding-top: 0;
+
+}

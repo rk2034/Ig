@@ -1,0 +1,380 @@
+.container1 {
+    background: linear-gradient(135deg, #6A1B9A, #9C27B0);
+    color: #fff;
+}
+
+/* Hide by default (desktop view) */
+.mobile-igce {
+    display: none;
+}
+
+/* Show only when screen is mobile */
+@media (max-width: 768px) {
+
+    .mobile-igce {
+        display: block;
+        background: #fff;
+        /* border-top: 3px solid #2f80ed; */
+        padding: 10px 15px;
+        font-family: sans-serif;
+    }
+
+    .mobile-nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mobile-logo {
+        width: 45px;
+        height: auto;
+    }
+
+    .mobile-title {
+        margin: 0;
+        color: #9C27B0;
+        font-weight: 600;
+    }
+
+    .mobile-text small {
+        color: #6A1B9A;
+        font-size: 12px;
+        display: block;
+    }
+
+    .mobile-naac {
+        color: red;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    /* Hamburger Button */
+    .mobile-menu-btn {
+        background: white;
+        border: 1px solid #ccc;
+        padding: 8px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #555;
+        margin: 4px 0;
+    }
+}
+
+/* Hide dropdown initially */
+.mobile-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    transition: max-height 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* When active */
+.mobile-dropdown.active {
+    max-height: 400px;
+}
+
+.mobile-dropdown a {
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+}
+
+.mobile-dropdown a:hover {
+    background: #f7b7ffe2;
+}
+
+/* Hide desktop nav in mobile */
+@media (max-width: 768px) {
+    .header-navbar {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none !important;
+    }
+}
+
+/* Desktop height */
+#carouselExampleCaptions .carousel-item {
+    height: 500px;
+}
+
+#carouselExampleCaptions .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobile height */
+@media (max-width: 768px) {
+    #carouselExampleCaptions .carousel-item {
+        height: 250px;
+    }
+}
+
+
+/* ===============================
+   GLOBAL
+================================ */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f6fb;
+    margin: 0;
+}
+
+/* ===============================
+   DEPARTMENT TITLE
+================================ */
+.dept h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #6A1B9A;
+    letter-spacing: 1px;
+}
+
+/* ===============================
+   GRID LAYOUT
+================================ */
+.academics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    padding: 50px;
+}
+
+/* ===============================
+   COURSE CARD
+================================ */
+.course-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 7px;
+    box-shadow: 0 10px 35px rgba(106, 27, 154, 0.08);
+    transition: all 0.35s ease;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Purple top accent line */
+.course-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* TOP LINE */
+.course-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg, #6A1B9A, #9C27B0);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.course-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg, #6A1B9A, #9C27B0);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 45px rgba(106, 27, 154, 0.18);
+}
+
+.course-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* ON HOVER */
+.course-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* CARD TITLE */
+.course-card h3 {
+    color: #6A1B9A;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* CARD DESCRIPTION */
+.course-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* SAME SIZE BUTTON */
+.course-card button {
+    background: linear-gradient(90deg, #6A1B9A, #9C27B0);
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    width: 150px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.course-card button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
+}
+
+/* ===============================
+   FULL SCREEN MODAL
+================================ */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #6A1B9A, #9C27B0);
+    padding: 70px 20px;
+    overflow-y: auto;
+}
+
+/* MODAL CONTENT */
+.modal-content {
+    background: #ffffff;
+    max-width: 950px;
+    margin: auto;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: modalFade 0.4s ease;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #6A1B9A;
+    transition: 0.3s;
+}
+
+/* .close-btn:hover {
+    transform: rotate(90deg);
+} */
+
+/* MODAL TITLE */
+.course-title,
+#modalTitle {
+    font-size: 38px;
+    color: #6A1B9A;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* MODAL DESCRIPTION */
+.course-description,
+#modalDescription {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: #444;
+}
+
+/* SECTION HEADINGS */
+.section h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+    color: #9C27B0;
+    border-left: 5px solid #9C27B0;
+    padding-left: 12px;
+    font-weight: 600;
+}
+
+/* LIST STYLE */
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    padding: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    transition: 0.2s;
+}
+
+.section ul li:hover {
+    padding-left: 8px;
+    color: #6A1B9A;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+
+    .academics {
+        padding: 25px;
+    }
+
+    .modal-content {
+        padding: 35px;
+    }
+
+    .course-title,
+    #modalTitle {
+        font-size: 28px;
+    }
+}
